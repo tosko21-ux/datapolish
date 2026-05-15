@@ -30,10 +30,19 @@ function process(type) {
       break;
     case "markdown":
       // Excel/Tab to Markdown Table conversion
+      // Escape characters that would break a markdown table cell:
+      //   \  -> \\   (backslash first, before we add new backslashes)
+      //   |  -> \|   (pipe is the table column separator)
+      //   \n -> <br> (in-cell newlines from multi-line Excel cells)
+      const escapeMdCell = (s) =>
+        s
+          .replace(/\\/g, "\\\\")
+          .replace(/\|/g, "\\|")
+          .replace(/\r?\n/g, "<br>");
       const lines = raw.trim().split("\n");
       result = lines
         .map((l, i) => {
-          const cols = l.split("\t").map((c) => c.trim());
+          const cols = l.split("\t").map((c) => escapeMdCell(c.trim()));
           let r = `| ${cols.join(" | ")} |`;
           if (i === 0) {
             const sep = `\n| ${cols.map(() => "---").join(" | ")} |`;
