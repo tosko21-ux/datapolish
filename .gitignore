@@ -1,0 +1,22 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local environment / Logs
+.env
+*.log
+v1/
+temp/
+
+# Vercel / Deployment leftovers
+.vercel
+
+# Deploy artifacts
+*.tar.gz
+*.tar

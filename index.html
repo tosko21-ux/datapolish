@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#020617" />
+
+    <!-- SEO & Branding -->
+    <title>DataPolish | Professional AI Prompt & Text Utility</title>
+    <meta
+      name="title"
+      content="DataPolish | Professional AI Prompt & Text Utility"
+    />
+    <meta
+      name="description"
+      content="Fix PDF layouts, strip HTML tags, and convert Excel to Markdown. 100% private, browser-based data polishing for the AI era."
+    />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://datapolish.org/" />
+    <meta
+      property="og:title"
+      content="DataPolish | Professional Text & AI Utility"
+    />
+    <meta
+      property="og:description"
+      content="The cleanest way to refine your data. No tracking, no registration."
+    />
+    <!-- og:image bude doplnene ked vyrobime og-image.png (1200x630) -->
+
+    <!-- Favicon & Styles -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Refine Your Data.</h1>
+        <p class="subtitle">
+          Fast, private, and powerful. Transform messy data into clean assets in
+          seconds.
+        </p>
+      </header>
+
+      <main class="card">
+        <div class="label-row">
+          <label for="mainInput">Input Raw Data</label>
+          <span id="charCount">0 characters</span>
+        </div>
+
+        <textarea
+          id="mainInput"
+          placeholder="Paste messy text, HTML, or Excel rows here..."
+          spellcheck="false"
+        ></textarea>
+
+        <div class="button-grid">
+          <button class="btn-tool" data-action="pdf">Fix PDF Layout</button>
+          <button class="btn-tool" data-action="html">Strip HTML Tags</button>
+          <button class="btn-tool" data-action="markdown">Excel to MD</button>
+          <button class="btn-tool" data-action="ai">Optimize AI Prompt</button>
+        </div>
+
+        <div id="outputContainer" class="hidden">
+          <div class="result-header">
+            <label>Refined Result</label>
+            <button id="copyBtn" class="btn-copy">Copy to Clipboard</button>
+          </div>
+          <div id="mainOutput" class="output-area"></div>
+        </div>
+      </main>
+
+      <footer>
+        <p>100% Client-side. Your data never leaves this browser.</p>
+        <div class="status-bar">
+          <span class="dot"></span> Global Service Status: Online
+          <span class="separator">|</span>
+          <a
+            href="https://bikegeardecoder.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="affiliate-link"
+            >Powered by GearDecoder</a
+          >
+        </div>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
