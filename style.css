@@ -236,3 +236,101 @@ footer {
 .home-link:hover {
   transform: translateY(-1px);
 }
+
+/* Content pages (About, Privacy) */
+.back-link {
+  display: inline-block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: var(--accent);
+}
+.content-h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+.content-card {
+  padding: 2.5rem;
+}
+.content-card .lead {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.content-card h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.01em;
+}
+.content-card h2:first-of-type {
+  margin-top: 0;
+}
+.content-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.content-card ul {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+}
+.content-card li {
+  margin-bottom: 0.5rem;
+}
+.content-card strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.content-card code {
+  background: #020617;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--accent);
+  border: 1px solid var(--border);
+}
+.inline-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.inline-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* Footer links */
+.footer-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+}
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: var(--accent);
+}
+.footer-links .separator {
+  color: var(--border);
+}

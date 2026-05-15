@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#020617" />
+    <title>About | DataPolish</title>
+    <meta
+      name="description"
+      content="About DataPolish — a fast, private, browser-based text utility for the AI era."
+    />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>"
+    />
+    <link rel="stylesheet" href="/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="/" class="back-link">← Back to DataPolish</a>
+        <h1 class="content-h1">About</h1>
+        <p class="subtitle">
+          A minimalist utility for the messy edges of data work.
+        </p>
+      </header>
+
+      <main class="card content-card">
+        <h2>What it does</h2>
+        <p>
+          DataPolish solves four small but recurring problems that show up
+          whenever you work with text and AI tools:
+        </p>
+        <ul>
+          <li>
+            <strong>PDF Layout Fixer</strong> — repairs broken line breaks and
+            soft hyphens left behind when you copy text out of a PDF.
+          </li>
+          <li>
+            <strong>HTML Stripper</strong> — extracts clean plain text from any
+            HTML snippet, using the browser's own DOM parser rather than fragile
+            regex.
+          </li>
+          <li>
+            <strong>Excel to Markdown</strong> — converts tab-separated rows
+            (the format you get when you copy from Excel, Google Sheets, or
+            Numbers) into a clean Markdown table.
+          </li>
+          <li>
+            <strong>AI Prompt Optimizer</strong> — strips redundant whitespace
+            and empty lines that waste LLM tokens without improving clarity.
+          </li>
+        </ul>
+
+        <h2>How it is built</h2>
+        <p>
+          The entire application is a single HTML page, a single CSS file, and a
+          single JavaScript file. No frameworks, no build step, no package
+          manager. The result loads in well under a second on any connection and
+          works offline once cached.
+        </p>
+        <p>
+          Everything runs in your browser. There is no backend that receives
+          your data. The server's only job is to serve five static files over
+          HTTPS. You can verify this for yourself by opening your browser's
+          DevTools and watching the Network tab while you use the tools — you
+          will see zero outgoing requests during processing.
+        </p>
+
+        <h2>How it is hosted</h2>
+        <p>
+          DataPolish runs in an isolated, read-only Docker container behind a
+          reverse proxy with Let's Encrypt SSL. The container has dropped all
+          unnecessary Linux capabilities and cannot escalate privileges.
+          Standard security headers (CSP, HSTS, X-Frame-Options,
+          Referrer-Policy, Permissions-Policy) are applied to every response.
+        </p>
+
+        <h2>Open source</h2>
+        <p>
+          The entire codebase, including the Nginx configuration and the Docker
+          setup, is published under the MIT license at
+          <a
+            href="https://github.com/tosko21-ux/datapolish"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-link"
+            >github.com/tosko21-ux/datapolish</a
+          >. Fork it, run it locally, deploy your own copy — whatever is useful.
+        </p>
+
+        <h2>Other small tools</h2>
+        <p>
+          If you found DataPolish handy, you may also like
+          <a
+            href="https://bikegeardecoder.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-link"
+            >BikeGearDecoder</a
+          >
+          — another minimalist single-page utility from the same author.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          The fastest way to reach the maintainer is to open an issue or
+          discussion on the GitHub repository.
+        </p>
+      </main>
+
+      <footer>
+        <p>100% Client-side. Your data never leaves this browser.</p>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <span class="separator">·</span>
+          <a href="/about">About</a>
+          <span class="separator">·</span>
+          <a href="/privacy">Privacy</a>
+          <span class="separator">·</span>
+          <a
+            href="https://github.com/tosko21-ux/datapolish"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
