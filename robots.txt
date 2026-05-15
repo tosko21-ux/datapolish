@@ -1,0 +1,8 @@
+# DataPolish robots.txt
+# https://datapolish.org
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://datapolish.org/sitemap.xml
